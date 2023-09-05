@@ -10,6 +10,7 @@ import BarChartCustom from '../../components/BarChartCustom';
 import Wallet from '../../../assets/icon/wallet-orange-icon.svg';
 import ButtonCustom from '../../components/Button';
 import RevenueAndExpenditure from './RevenueAndExpenditure';
+import UploadProgress from '../../components/UploadProgress';
 
 const FundScreen = ({ navigation }) => {
   return (
@@ -31,9 +32,12 @@ const FundScreen = ({ navigation }) => {
             <Text style={styles.textDetail}>0 đ</Text>
           </View>
         </Card>
-        <ButtonCustom />
+        <View style={styles.btnRevenue}>
+          <ButtonCustom />
+        </View>
         <Text style={styles.titleRevenue}>Báo cáo thu chi</Text>
         <RevenueAndExpenditure />
+        <UploadProgress />
       </View>
     </ScrollView>
   );
@@ -75,6 +79,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#27364B',
     margin: 20,
+  },
+  btnRevenue: {
+    alignItems: 'center',
   },
 });
 

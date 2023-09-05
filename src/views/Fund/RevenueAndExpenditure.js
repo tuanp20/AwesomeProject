@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import BarChartCustom from '../../components/BarChartCustom';
 import DropDownPicker from 'react-native-dropdown-picker';
+import Dropdown from '../../components/Dropdown';
 
 const listTab = [
   {
@@ -84,28 +85,8 @@ const RevenueAndExpenditure = () => {
           <Text style={styles.totalAmount}>10.000.000 đ</Text>
         </View>
         <View style={styles.headerChartRight}>
-          <Text>Xem</Text>
-
-          <DropDownPicker
-            open={open}
-            value={value}
-            items={items}
-            setOpen={setOpen}
-            setValue={setValue}
-            setItems={setItems}
-            theme='DARK'
-            multiple={true}
-            mode='BADGE'
-            badgeDotColors={[
-              '#e76f51',
-              '#00b4d8',
-              '#e9c46a',
-              '#e76f51',
-              '#8ac926',
-              '#00b4d8',
-              '#e9c46a',
-            ]}
-          />
+          <Text style={styles.textColor}>Xem:</Text>
+          <Dropdown />
         </View>
       </View>
       <BarChartCustom />
@@ -123,17 +104,18 @@ const styles = StyleSheet.create({
   listTab: {
     flexDirection: 'row',
     alignSelf: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
     backgroundColor: '#F1F4F9',
     borderRadius: 15,
     borderColor: '#E2E8F0',
     borderWidth: 2,
+    height: 35,
   },
   btnTab: {
     width: Dimensions.get('window').width / 3.5,
     flexDirection: 'row',
     borderWidth: 0.5,
-    padding: 10,
+    alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 15,
     borderColor: '#E2E8F0',
@@ -158,6 +140,14 @@ const styles = StyleSheet.create({
   },
   headerChartLeft: {
     flex: 1,
+  },
+  headerChartRight: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textColor: {
+    color: '#64748B',
   },
   titleChartLeft: {
     fontSize: 12,
