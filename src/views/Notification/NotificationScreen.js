@@ -44,6 +44,36 @@ const NotificationScreen = ({ navigation }) => {
       timeOfContent: '2 tiếng trước',
       icon: <ChangeLogo color={'red'} size={100} />,
     },
+    {
+      logo: <ChangeLogo color={'red'} size={100} />,
+      content: 'Yêu cầu thay đổi biểu tượng app.',
+      timeOfContent: '2 tiếng trước',
+      icon: <ChangeLogo color={'red'} size={100} />,
+    },
+    {
+      logo: <ChangeLogo color={'red'} size={100} />,
+      content: 'Yêu cầu thay đổi biểu tượng app.',
+      timeOfContent: '2 tiếng trước',
+      icon: <ChangeLogo color={'red'} size={100} />,
+    },
+    {
+      logo: <ChangeLogo color={'red'} size={100} />,
+      content: 'Yêu cầu thay đổi biểu tượng app.',
+      timeOfContent: '2 tiếng trước',
+      icon: <ChangeLogo color={'red'} size={100} />,
+    },
+    {
+      logo: <ChangeLogo color={'red'} size={100} />,
+      content: 'Yêu cầu thay đổi biểu tượng app.',
+      timeOfContent: '2 tiếng trước',
+      icon: <ChangeLogo color={'red'} size={100} />,
+    },
+    {
+      logo: <ChangeLogo color={'red'} size={100} />,
+      content: 'Yêu cầu thay đổi biểu tượng app.',
+      timeOfContent: '2 tiếng trước',
+      icon: <ChangeLogo color={'red'} size={100} />,
+    },
   ]);
 
   console.log('data', data);
