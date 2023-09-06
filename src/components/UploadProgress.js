@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Dimensions, StyleSheet, View } from 'react-native';
 import ProgressBar from 'react-native-progress/Bar';
 
-const UploadProgress = () => {
+const UploadProgress = ({ style }) => {
   const [progress, setProgress] = useState(0.6);
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { ...style }]}>
       <ProgressBar
         progress={progress}
-        width={Dimensions.get('window').width / 1.2}
+        width={Dimensions.get('window').width / 1.15}
         color='#F58F00'
         borderColor='transparent'
         backgroundColor='#E2E8F0'

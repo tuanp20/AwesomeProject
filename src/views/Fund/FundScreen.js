@@ -11,6 +11,8 @@ import Wallet from '../../../assets/icon/wallet-orange-icon.svg';
 import ButtonCustom from '../../components/Button';
 import RevenueAndExpenditure from './RevenueAndExpenditure';
 import UploadProgress from '../../components/UploadProgress';
+import { CardFundForMonth } from '../../components/CardFundForMonth';
+import { Achievements } from '../../components/Achievements';
 
 const FundScreen = ({ navigation }) => {
   return (
@@ -32,12 +34,14 @@ const FundScreen = ({ navigation }) => {
             <Text style={styles.textDetail}>0 đ</Text>
           </View>
         </Card>
+
         <View style={styles.btnRevenue}>
           <ButtonCustom />
         </View>
         <Text style={styles.titleRevenue}>Báo cáo thu chi</Text>
         <RevenueAndExpenditure />
-        <UploadProgress />
+        <CardFundForMonth />
+        <Achievements />
       </View>
     </ScrollView>
   );

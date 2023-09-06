@@ -10,6 +10,9 @@ import {
 import BarChartCustom from '../../components/BarChartCustom';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Dropdown from '../../components/Dropdown';
+// import ImgNoData from '../../../assets/img/logo/no-data.svg';
+import ImgNoData from '../../../assets/img/no-data.svg';
+import NoData from '../../components/NoData';
 
 const listTab = [
   {
@@ -30,11 +33,7 @@ const data = [
   { name: 'D', category: 'Chi' },
 ];
 
-// const filters = ['Năm', 'Quý', 'Tháng'];
-
 const RevenueAndExpenditure = () => {
-  //   const [open, setOpen] = useState(false);
-  //   const [filters, setFilters] = useState(['Năm', 'Quý', 'Tháng']);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState([
     'italy',
@@ -56,7 +55,7 @@ const RevenueAndExpenditure = () => {
   const setCategoryFilter = (category) => {
     setCategory(category);
   };
-  console.log('category', category);
+  const [isData, setIsData] = useState(true);
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.listTab}>
@@ -79,17 +78,23 @@ const RevenueAndExpenditure = () => {
           </TouchableOpacity>
         ))}
       </View>
-      <View style={styles.headerChart}>
-        <View style={styles.headerChartLeft}>
-          <Text style={styles.titleChartLeft}>Tổng thu tháng này</Text>
-          <Text style={styles.totalAmount}>10.000.000 đ</Text>
+      {isData ? (
+        <View>
+          <View style={styles.headerChart}>
+            <View style={styles.headerChartLeft}>
+              <Text style={styles.titleChartLeft}>Tổng thu tháng này</Text>
+              <Text style={styles.totalAmount}>10.000.000 đ</Text>
+            </View>
+            <View style={styles.headerChartRight}>
+              <Text style={styles.textColor}>Xem:</Text>
+              <Dropdown />
+            </View>
+          </View>
+          <BarChartCustom />
         </View>
-        <View style={styles.headerChartRight}>
-          <Text style={styles.textColor}>Xem:</Text>
-          <Dropdown />
-        </View>
-      </View>
-      <BarChartCustom />
+      ) : (
+        <NoData style={styles.styleNoData} />
+      )}
     </SafeAreaView>
   );
 };
@@ -158,6 +163,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#48A659',
     fontWeight: '700',
+  },
+  styleNoData: {
+    marginVertical: 20,
   },
 });
 

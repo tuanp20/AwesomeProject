@@ -8,8 +8,6 @@ import {
 import ArrowRight from '../../../assets/icon/arrow-right-icon.svg';
 import Logout from '../../../assets/icon/logout-icon.svg';
 import { configSetting, premium } from '../../constants/setting';
-import ItemNotification from '../../components/ItemNotification';
-import ChangeLogo from '../../../assets/icon/change-logo-icon.svg';
 
 const SettingScreen = ({ navigation }) => {
   return (
