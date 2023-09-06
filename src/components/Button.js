@@ -1,7 +1,6 @@
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const ButtonCustom = ({ title, color, style }) => {
-  console.log('style', style);
   return (
     <TouchableOpacity style={[styles.appButtonContainer, { ...style }]}>
       <Text style={styles.appButtonText}>+ Tạo Quỹ/Thu/Chi</Text>

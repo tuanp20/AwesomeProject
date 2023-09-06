@@ -76,7 +76,6 @@ const NotificationScreen = ({ navigation }) => {
     },
   ]);
 
-  console.log('data', data);
   return (
     <View style={isContent ? styles.container : styles.containerData}>
       {isContent ? (

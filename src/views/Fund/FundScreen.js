@@ -24,7 +24,7 @@ const FundScreen = ({ navigation }) => {
               <Wallet size={30} color={'#F58F00'} />
               <Text style={{ fontWeight: '600', marginLeft: 5 }}>Quỹ đội</Text>
             </View>
-            <TouchableOpacity onPress={() => navigation.goBack()}>
+            <TouchableOpacity onPress={() => navigation.navigate('FundDetail')}>
               <Text style={styles.textDetail}>Xem chi tiết</Text>
             </TouchableOpacity>
           </View>
